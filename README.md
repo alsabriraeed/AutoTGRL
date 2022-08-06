@@ -56,7 +56,7 @@ pip install transformers
 ## Running the Experiment
 For training, please refer to the script 'main.py' 
 ```python
-python main.py --dataset ade
+python main.py --dataset R52
 ```
 
 Note: more details will be added soon.
