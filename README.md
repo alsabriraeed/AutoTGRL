@@ -51,12 +51,31 @@ pip install torch-scatter==2.0.9 torch-sparse==0.6.12 torch-cluster==1.5.9 torch
 ```python
 pip install transformers
 ```
+**6. pytorch-ignite:** execute the following command in your conda env autotgrl
+```python
+pip install pytorch-ignite
+```
 
 
 ## Running the Experiment
+For cleaning text dataset, please refer to the script 'main_clean_data.py' 
+```python
+python main_clean_data.py --dataset R52 --model_type 'transductive'
+```
+
+For text graph representation, please refer to the script 'main_build_graph.py' 
+```python
+python main_build_graph.py --dataset R52 --model_type 'transductive'
+```
+
+For generating initial document embedding, please refer to the script 'finetune_bert.py' 
+```python
+python large_scale_embd/finetune_bert.py --dataset R52 --bert_lr 1e-4  --bert_init  'roberta-base'
+```
+
 For training, please refer to the script 'main.py' 
 ```python
-python main.py --dataset R52
+python main.py --dataset R52 --model_type 'transductive'
 ```
 
 Note: more details will be added soon.
