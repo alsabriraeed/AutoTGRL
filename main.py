@@ -29,7 +29,7 @@ def register_default_args(parser):
 #------------------------------------------------------------------                                                            
     parser.add_argument('--mode', type=str, default='train',
                         choices=['train', 'derive'],
-                        help='train: Training GraphNAS, derive: Deriving Architectures')                 
+                        help='train: Training AutoTGR, derive: Deriving Architectures')                 
     parser.add_argument('--model_type', type=str, default='transductive',
                         choices=['transductive', 'inductive'],
                         help='inductive: each docunemt a graph, transductive: a graph for the whole corpus')            
@@ -108,8 +108,8 @@ def register_default_args(parser):
     parser.add_argument('--relu', action='store_true', help='ablation: use relu before softmax')
     parser.add_argument('--device', type=str, default='cuda:0', help='device for computing')            
     parser.add_argument('--path_data', type=str, default=sys.path[0], help='path of the data corpus')      
-    parser.add_argument('--path_log', type=str, default='/content/drive/MyDrive/ColabNotebooks/TextGNAS/idata/result/logs/', help='path of the training logs')
-    parser.add_argument('--path_model', type=str, default='/content/drive/MyDrive/ColabNotebooks/TextGNAS/idata/result/models/', help='path of the trained model')
+    parser.add_argument('--path_log', type=str, default='/logs/', help='path of the training logs')
+    parser.add_argument('--path_model', type=str, default='/result/models/', help='path of the trained model')
     parser.add_argument('--lr_step', type=int, default=5, help='number of epoch for each lr downgrade')         
     parser.add_argument('--lr_gamma', type=float, default=0.1, help='strength of lr downgrade')             
     parser.add_argument('--save_model', type=bool, default=False, help='save model for further use')              
